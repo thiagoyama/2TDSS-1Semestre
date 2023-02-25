@@ -1,6 +1,5 @@
 package br.com.fiap.bean;
 
-<<<<<<< HEAD
 import java.util.Calendar;
 
 import br.com.fiap.exception.SaldoInsuficienteException;
@@ -55,8 +54,3 @@ public abstract class Conta {
 		return saldo;
 	}
 }
-=======
-public class Conta {
-
-}
->>>>>>> 1ccfef98d8a4b6adc8732128d7e6630612f09b50
