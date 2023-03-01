@@ -1,7 +1,9 @@
 package br.com.fiap.model;
 
 import br.com.fiap.anotation.Coluna;
+import br.com.fiap.anotation.Tabela;
 
+@Tabela(nome = "TAB_PESSOA")
 public class Pessoa {
 
 	@Coluna(nome = "nm_pessoa", obrigatorio = true, tamanho = 100)
