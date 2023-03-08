@@ -1,6 +1,5 @@
 package br.com.fiap.entity;
 
-import java.time.LocalDate;
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -18,9 +17,9 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name="TAB_CLIENTE")
+@Table(name="TDSS_TB_CLIENTE")
 //name: nome igual ao generator, sequenceName: nome no Banco, allocationSize: incremento
-@SequenceGenerator(name="cliente", sequenceName = "SQ_TAB_CLIENTE", allocationSize = 1)
+@SequenceGenerator(name="cliente", sequenceName = "SQ_TDSS_TAB_CLIENTE", allocationSize = 1)
 public class Cliente {
 
 	@Id
@@ -45,7 +44,7 @@ public class Cliente {
 	@Column(name="nr_cpf", nullable = false, length = 11)
 	private String cpf;
 	
-	@Transient
+	@Transient //Não será uma coluna na tabela
 	private Integer idade;
 	
 	@Lob

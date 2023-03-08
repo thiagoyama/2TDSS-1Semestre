@@ -15,7 +15,7 @@
 				create -> apaga e cria as tabelas de acordo com as classes
 				validate -> validar se as tabelas estão de acordo com as classes
 			 -->
-			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
 			
 			<!-- Dialeto, responsável por gerar o SQL nativo -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
@@ -24,10 +24,10 @@
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
 			
 			<!-- Usuário do banco, rmxxxxxx -->
-			<property name="javax.persistence.jdbc.user" value=""/>
+			<property name="javax.persistence.jdbc.user" value="pf0392"/>
 			
 			<!-- Senha do banco, data de nascimento com 6 digitos -->
-			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="javax.persistence.jdbc.password" value="fiap"/>
 			
 			<!-- URL do banco -->
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl"/>
