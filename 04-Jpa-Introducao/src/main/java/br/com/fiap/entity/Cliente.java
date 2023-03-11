@@ -16,6 +16,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 @Entity
 @Table(name="TDSS_TB_CLIENTE")
 //name: nome igual ao generator, sequenceName: nome no Banco, allocationSize: incremento
@@ -33,7 +35,8 @@ public class Cliente {
 	@Temporal(TemporalType.DATE) //Grava somente a data no banco
 	@Column(name="dt_nascimento")
 	private Calendar dataNascimento;
-	
+		
+	@CreationTimestamp //Criar a data atual automaticamente no cadastro
 	@Temporal(TemporalType.TIMESTAMP)//Grava a data e hora no banco
 	@Column(name="dt_cadastro", updatable = false)
 	private Calendar dataCadastro;
@@ -54,6 +57,17 @@ public class Cliente {
 	@Enumerated(EnumType.STRING) //Gravar o texto da constante
 	@Column(name="ds_genero", length = 20)
 	private Genero genero;
+	
+	public Cliente() {}
+	
+	public Cliente(String nome, Calendar dataNascimento, Double credito, String cpf, Genero genero) {
+		super();
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.credito = credito;
+		this.cpf = cpf;
+		this.genero = genero;
+	}
 
 	public Integer getId() {
 		return id;
