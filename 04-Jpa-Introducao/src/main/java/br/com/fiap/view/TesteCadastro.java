@@ -20,10 +20,10 @@ public class TesteCadastro {
 		//Criar o Entity Manager
 		EntityManager em = fabrica.createEntityManager();
 		
-		//Chamar o método persist() do Entity Manager
+		//Chamar o mï¿½todo persist() do Entity Manager
 		em.persist(cliente);
 		
-		//Transação - Commit
+		//Transaï¿½ï¿½o - Commit
 		em.getTransaction().begin();
 		em.getTransaction().commit();
 		
