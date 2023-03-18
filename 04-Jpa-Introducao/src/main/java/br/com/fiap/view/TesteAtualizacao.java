@@ -16,7 +16,7 @@ public class TesteAtualizacao {
 		//Instanciar um Cliente com um Id valido
 		Cliente cliente  = new Cliente("2berto", 
 				new GregorianCalendar(2003, Calendar.OCTOBER, 11), 
-				1.0, "1115646546", Genero.FEMININO);
+				1.0, "1115646546", Genero.MASCULINO);
 		
 		cliente.setId(24);
 		

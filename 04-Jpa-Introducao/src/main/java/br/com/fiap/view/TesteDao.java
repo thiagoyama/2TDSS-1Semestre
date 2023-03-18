@@ -4,24 +4,32 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.fiap.entity.Cliente;
+import br.com.fiap.dao.ClienteDao;
+import br.com.fiap.dao.ClienteDaoImpl;
 
-public class TesteRemover {
-	
-	//Remover o cliente de codigo x
+public class TesteDao {
+
+	//Implementar o CRUD com o DAO
 	public static void main(String[] args) {
 		//Criar a fabrica
 		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
-		//Criar o Entity Manager
+		
+		//Criar o Entity manager
 		EntityManager em = fabrica.createEntityManager();
 		
-		//Pesquisar o cliente que sera removido
-		Cliente cliente = em.find(Cliente.class, 2);
+		//Instanciar o DAO
+		ClienteDao dao = new ClienteDaoImpl(em);
 		
-		//Chamar o método remover
-		em.remove(cliente);
+		//Cadastrar um Cliente
 		
-		em.getTransaction().begin();
-		em.getTransaction().commit();
+		
+		//Pesquisar um Cliente
+		
+		
+		//Atualizar um Cliente
+		
+		
+		//Remover um Cliente
+		
 	}
 }
