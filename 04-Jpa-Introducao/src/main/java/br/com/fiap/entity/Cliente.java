@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.PostPersist;
+import javax.persistence.PrePersist;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -67,6 +69,11 @@ public class Cliente {
 		this.credito = credito;
 		this.cpf = cpf;
 		this.genero = genero;
+	}
+	
+	@PostPersist //Executa o metodo apos o persist
+	private void executar() {
+		System.out.println("Executando o método..");
 	}
 
 	public Integer getId() {
