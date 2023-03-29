@@ -1,11 +1,9 @@
 package br.com.fiap.jpa.dao;
 
-import java.util.List;
+import java.lang.reflect.ParameterizedType;
 import javax.persistence.EntityManager;
 import br.com.fiap.jpa.exception.CommitException;
 import br.com.fiap.jpa.exception.IdNaoEncontradoException;
-
-import java.lang.reflect.ParameterizedType;
 
 public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 	
@@ -16,7 +14,7 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 	@SuppressWarnings("all")
 	public GenericDaoImpl(EntityManager em) {
 		this.em = em;
-		//Obter em tempo de execução o .class da Entidade
+		//Obter em tempo de execuï¿½ï¿½o o .class da Entidade
 		this.clazz = (Class<T>) ((ParameterizedType) 
 				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
@@ -33,7 +31,7 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 	public T buscar(K id) throws IdNaoEncontradoException {
 		T entidade = em.find(clazz, id);
 		if (entidade == null) {
-			throw new IdNaoEncontradoException("Entidade não encontrada");
+			throw new IdNaoEncontradoException("Entidade nï¿½o encontrada");
 		}
 		return entidade;
 	}
