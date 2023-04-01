@@ -14,11 +14,11 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 	@SuppressWarnings("all")
 	public GenericDaoImpl(EntityManager em) {
 		this.em = em;
-		//Obter em tempo de execu��o o .class da Entidade
+		//Obter em tempo de execucao o .class da Entidade
 		this.clazz = (Class<T>) ((ParameterizedType) 
 				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
-
+	
 	public void salvar(T entidade) {
 		em.merge(entidade);
 	}

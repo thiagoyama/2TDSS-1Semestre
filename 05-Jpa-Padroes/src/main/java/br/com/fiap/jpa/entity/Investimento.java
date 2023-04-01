@@ -29,6 +29,14 @@ public class Investimento {
 	@Enumerated(EnumType.STRING)
 	@Column(name="ds_tipo", length = 40)
 	private TipoInvestimento tipo;
+	
+	public Investimento() {}
+
+	public Investimento(String nome, Double valor, TipoInvestimento tipo) {
+		this.nome = nome;
+		this.valor = valor;
+		this.tipo = tipo;
+	}
 
 	public Integer getCodigo() {
 		return codigo;
