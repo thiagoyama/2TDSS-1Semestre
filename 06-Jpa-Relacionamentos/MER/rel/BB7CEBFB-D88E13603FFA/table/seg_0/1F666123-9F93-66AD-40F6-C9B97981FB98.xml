@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1F666123-9F93-66AD-40F6-C9B97981FB98" name="TB_ENDERECO">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:36:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_endereco" id="ECBD2575-E3D5-5A70-4910-1603E7518F16">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:36:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_logradouro" id="993CDD9F-1741-CE87-4FF6-46CE4F00E00A">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:36:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_cep" id="CFAA4955-3CB3-59ED-E6AC-ADCAAFD5C8C3">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:36:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFE9A3FC-AA80-5B95-1D66-59BC9E78D137" name="TB_ENDERECO_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:36:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECBD2575-E3D5-5A70-4910-1603E7518F16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

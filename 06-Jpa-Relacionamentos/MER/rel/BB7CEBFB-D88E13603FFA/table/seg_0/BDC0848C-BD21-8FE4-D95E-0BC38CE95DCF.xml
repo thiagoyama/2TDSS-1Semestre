@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BDC0848C-BD21-8FE4-D95E-0BC38CE95DCF" name="TB_EDITORA">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:37:57 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_editora" id="639D70F1-5AD6-53B3-B655-F0538157B86C">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:38:22 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_editora" id="84CCECEC-58BA-4A73-6110-A4168415424A">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:38:22 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5847280-CE00-A45D-D235-1BD4D2EBE083" name="TB_EDITORA_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:38:22 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="639D70F1-5AD6-53B3-B655-F0538157B86C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

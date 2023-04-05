@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="13B10319-636D-6406-B572-35A8902B93FE" containerWithKeyObject="08C3CF0E-AD9F-5BDC-E452-564FEA23987B" localFKIndex="1B1559D9-A214-C41E-E944-664E78C8B10A" name="TB_LIVRO_TB_EDITORA_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:39:30 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>TB_EDITORA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BDC0848C-BD21-8FE4-D95E-0BC38CE95DCF</referredTableID>
+<keyObject>C5847280-CE00-A45D-D235-1BD4D2EBE083</keyObject>
+<referredKeyID>C5847280-CE00-A45D-D235-1BD4D2EBE083</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_editora</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

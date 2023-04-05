@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BE356D00-B740-8008-E6A9-67E9045D138D" name="TB_BIBLIOTECA">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:34:50 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_biblioteca" id="14062679-F9AA-E449-13C0-92830A653093">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:35:54 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_biblioteca" id="808C2846-625E-62D7-426D-D0AB7450CC36">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:35:54 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_abertura" id="D7BDF7FB-9224-866C-5D5F-8D7FF2B5457A">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:35:54 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_endereco" id="C5A37401-B304-7A3D-F6BC-5060CE51691F">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:40:26 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7149C57C-B7FB-49E7-E94A-5BF40B1EDB77" referredColumn="ECBD2575-E3D5-5A70-4910-1603E7518F16"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DBFD7F6B-674B-78A8-3BE1-041E9FE25138" name="TB_BIBLIOTECA_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:35:54 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14062679-F9AA-E449-13C0-92830A653093"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="073F273B-AE76-6491-0432-94A1DAC4A767" name="TB_BIBLIOTECA__UN">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:40:45 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5A37401-B304-7A3D-F6BC-5060CE51691F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F9B0DF6-1EAF-1EE3-E2B3-BE7E8291BE06" name="TB_BIBLIOTECA_TB_ENDERECO_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:40:26 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5A37401-B304-7A3D-F6BC-5060CE51691F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

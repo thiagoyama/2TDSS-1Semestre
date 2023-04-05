@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F90FF9A7-0F7F-4C9F-A331-1AE4D052915B" name="TB_LIVRO_BIBLIOTECA">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:41:59 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_livro" id="6F63779D-3647-22ED-102F-A81518209444">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:42:10 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC5C3338-156C-7096-93C9-824318EF144A" referredColumn="6142138E-AC42-59E9-A12F-08243C455F31"/>
+</associations>
+</Column>
+<Column name="cd_biblioteca" id="C554D781-A163-4E57-C4D9-8CFDC37E0F79">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:42:14 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="95A363AD-5BDD-D890-BEC8-85AC74F47C10" referredColumn="14062679-F9AA-E449-13C0-92830A653093"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2792D561-AAE3-F6EE-D15C-FA5EA5AE2713" name="TB_LIVRO_BIBLIOTECA_PK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:42:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F63779D-3647-22ED-102F-A81518209444"/>
+<colUsage columnID="C554D781-A163-4E57-C4D9-8CFDC37E0F79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29CB699A-AEDE-F9F6-B9AB-637045763208" name="TB_LIVRO_BIBLIOTECA_TB_LIVRO_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:42:10 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F63779D-3647-22ED-102F-A81518209444"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="735D33ED-8796-2D9D-2F7B-D6BD41AE164C" name="TB_LIVRO_BIBLIOTECA_TB_BIBLIOTECA_FK">
+<createdBy>logonpflocal</createdBy>
+<createdTime>2023-04-05 00:42:14 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C554D781-A163-4E57-C4D9-8CFDC37E0F79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
