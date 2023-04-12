@@ -5,7 +5,7 @@ import br.com.fiap.jpa.exception.IdNaoEncontradoException;
 
 public interface GenericDao<T,K> {
 
-	void salvar(T entidade);
+	T salvar(T entidade);
 	
 	void remover(K id) throws IdNaoEncontradoException;
 	

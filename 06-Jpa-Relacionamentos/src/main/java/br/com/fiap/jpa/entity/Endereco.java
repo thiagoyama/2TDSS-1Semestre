@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -23,5 +24,48 @@ public class Endereco {
 	
 	@Column(name="nr_cep",  nullable = false, length = 9)
 	private String cep;
+
+	//nome do atributo que mapeia a FK
+	@OneToOne(mappedBy = "endereco") 
+	private Biblioteca biblioteca;
+	
+	public Endereco() {}
+	
+	public Endereco(String logradouro, String cep) {
+		this.logradouro = logradouro;
+		this.cep = cep;
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public Biblioteca getBiblioteca() {
+		return biblioteca;
+	}
+
+	public void setBiblioteca(Biblioteca biblioteca) {
+		this.biblioteca = biblioteca;
+	}
 	
 }

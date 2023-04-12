@@ -35,4 +35,44 @@ public class Biblioteca {
 	@JoinColumn(name = "cd_endereco", nullable = false)
 	private Endereco endereco;
 	
+	public Biblioteca() {}
+
+	public Biblioteca(String nome, Calendar dataAbertura, Endereco endereco) {
+		this.nome = nome;
+		this.dataAbertura = dataAbertura;
+		this.endereco = endereco;
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Calendar getDataAbertura() {
+		return dataAbertura;
+	}
+
+	public void setDataAbertura(Calendar dataAbertura) {
+		this.dataAbertura = dataAbertura;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
 }

@@ -19,8 +19,8 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 				getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 	
-	public void salvar(T entidade) {
-		em.merge(entidade);
+	public T salvar(T entidade) {
+		return em.merge(entidade);
 	}
 
 	public void remover(K id) throws IdNaoEncontradoException {
