@@ -1,10 +1,13 @@
 package br.com.fiap.jpa.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -23,5 +26,9 @@ public class Livro {
 	
 	@Column(name="nr_pagina", precision = 5)
 	private Integer numeroPaginas;
+	
+	@ManyToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name="cd_editora", nullable = false)
+	private Editora editora;
 	
 }

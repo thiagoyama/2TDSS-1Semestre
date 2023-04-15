@@ -31,9 +31,9 @@ public class ExemploCadastro {
 		
 		try {
 			//Cadastrar o Endereco
-			Endereco salvo = enderecoDao.salvar(end);
-			//Seta o endereço cadastrado no banco na biblioteca
-			b.setEndereco(salvo);
+			//Endereco salvo = enderecoDao.salvar(end);
+			//Seta o endereco cadastrado no banco na biblioteca
+			//b.setEndereco(salvo);
 			//enderecoDao.commit();
 			//Cadastrar a Biblioteca
 			bibliotecaDao.salvar(b);
@@ -41,5 +41,9 @@ public class ExemploCadastro {
 		} catch (CommitException e) {
 			e.printStackTrace();
 		}
+		
+		//Cadastrar um livro e uma editora
+		
+		
 	}
 }

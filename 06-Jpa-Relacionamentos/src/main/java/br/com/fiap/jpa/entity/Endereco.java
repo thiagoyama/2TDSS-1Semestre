@@ -1,7 +1,9 @@
 package br.com.fiap.jpa.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +28,7 @@ public class Endereco {
 	private String cep;
 
 	//nome do atributo que mapeia a FK
-	@OneToOne(mappedBy = "endereco") 
+	@OneToOne(mappedBy = "endereco", fetch = FetchType.LAZY) 
 	private Biblioteca biblioteca;
 	
 	public Endereco() {}

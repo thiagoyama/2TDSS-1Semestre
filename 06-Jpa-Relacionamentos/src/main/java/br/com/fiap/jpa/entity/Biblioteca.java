@@ -2,8 +2,10 @@ package br.com.fiap.jpa.entity;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,7 +33,7 @@ public class Biblioteca {
 	@Column(name="dt_abertura")
 	private Calendar dataAbertura;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 	@JoinColumn(name = "cd_endereco", nullable = false)
 	private Endereco endereco;
 	
