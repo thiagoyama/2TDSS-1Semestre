@@ -1,6 +1,7 @@
 package br.com.fiap.jpa.entity;
 
 import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -10,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -33,9 +36,16 @@ public class Biblioteca {
 	@Column(name="dt_abertura")
 	private Calendar dataAbertura;
 	
-	@OneToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+	@OneToOne(cascade =  { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.EAGER)
 	@JoinColumn(name = "cd_endereco", nullable = false)
 	private Endereco endereco;
+	
+	//Relacionamento M:N
+	@ManyToMany(cascade = CascadeType.MERGE)
+	@JoinTable(name="TB_LIVRO_BIBLIOTECA", 
+		joinColumns = @JoinColumn(name="cd_biblioteca"),
+		inverseJoinColumns = @JoinColumn(name="cd_livro"))
+	private List<Livro> livros;
 	
 	public Biblioteca() {}
 
@@ -75,6 +85,14 @@ public class Biblioteca {
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+
+	public List<Livro> getLivros() {
+		return livros;
+	}
+
+	public void setLivros(List<Livro> livros) {
+		this.livros = livros;
 	}
 	
 }
