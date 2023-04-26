@@ -84,6 +84,5 @@ public class ExemploCadastro {
 			System.out.println(e.getMessage());
 		}
 		
-		
 	}//main
 }//class
