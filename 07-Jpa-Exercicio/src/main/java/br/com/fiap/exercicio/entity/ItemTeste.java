@@ -38,6 +38,12 @@ public class ItemTeste {
 			inverseJoinColumns = @JoinColumn(name="cod_usuario"))
 	private List<Usuario> usuarios;
 
+	public ItemTeste() {}
+	
+	public ItemTeste(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public Integer getCodigo() {
 		return codigo;
 	}

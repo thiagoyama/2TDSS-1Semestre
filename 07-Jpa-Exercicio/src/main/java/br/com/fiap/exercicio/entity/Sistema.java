@@ -36,6 +36,13 @@ public class Sistema {
 		//Setar o sistema (FK) no caso teste
 		caso.setSistema(this);
 	}
+	
+	public Sistema() {
+	}
+
+	public Sistema(String nome) {
+		this.nome = nome;
+	}
 
 	public Integer getCodigo() {
 		return codigo;

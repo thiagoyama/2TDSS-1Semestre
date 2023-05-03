@@ -43,6 +43,16 @@ public class CasoTeste {
 		itensTestes.add(item);
 		item.setCasoTeste(this);
 	}
+	
+	public CasoTeste() {}
+
+	public CasoTeste(String nome, String descricao) {
+		super();
+		this.nome = nome;
+		this.descricao = descricao;
+	}
+
+
 
 	public Integer getCodigo() {
 		return codigo;
