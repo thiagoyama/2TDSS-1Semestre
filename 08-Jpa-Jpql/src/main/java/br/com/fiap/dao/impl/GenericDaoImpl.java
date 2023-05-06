@@ -1,6 +1,7 @@
 package br.com.fiap.dao.impl;
 
 import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 
@@ -21,17 +22,14 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 			.getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 	
-	@Override
 	public void cadastrar(T entity) {
 		em.persist(entity);
 	}
 
-	@Override
 	public void alterar(T entity) {
 		em.merge(entity);
 	}
 
-	@Override
 	public void remover(K codigo) throws EntityNotFoundException {
 		T entidade = pesquisar(codigo);
 		if (entidade == null){
@@ -40,7 +38,6 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 		em.remove(entidade);
 	}
 
-	@Override
 	public T pesquisar(K codigo) {
 		return em.find(clazz, codigo);
 	}
@@ -54,6 +51,11 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 				em.getTransaction().rollback();
 			throw new CommitException("Erro no commit", e);
 		}
+	}
+
+	public List<T> listar() {
+		return em.createQuery("from " + clazz.getSimpleName(), clazz)
+				.getResultList();
 	}
 
 }

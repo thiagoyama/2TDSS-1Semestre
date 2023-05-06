@@ -94,21 +94,21 @@ public class PopulaBanco {
 		 */
 		Endereco end1 = new Endereco("Rua Lins de Vasconcelos", 12898999, cidade2);
 		Calendar dtNasc1 = new GregorianCalendar(1983, Calendar.AUGUST, 19);
-		List<Pacote> listPac1 = new ArrayList<>();
+		List<Pacote> listPac1 = new ArrayList<Pacote>();
 		listPac1.add(pacote1);
 		listPac1.add(pacote2);
 		Cliente cliente1 = new Cliente("Thiago", "98728018736", dtNasc1, end1,  listPac1);
 		
 		Endereco end2 = new Endereco("Rua Duque de Caxias, 2-90", 17017519, cidade1);
 		Calendar dtNasc2 = new GregorianCalendar(1990, Calendar.FEBRUARY, 2);
-		List<Pacote> listPac2 = new ArrayList<>();
+		List<Pacote> listPac2 = new ArrayList<Pacote>();
 		listPac2.add(pacote1);
 		listPac2.add(pacote4);
 		Cliente cliente2 = new Cliente("Leandro", "50293494030", dtNasc2, end2,  listPac2);
 		
 		Endereco end3 = new Endereco("Rua 23 de janeiro, 900", 12892309, cidade3);
 		Calendar dtNasc3 = new GregorianCalendar(1999, Calendar.FEBRUARY, 24);
-		List<Pacote> listPac3 = new ArrayList<>();
+		List<Pacote> listPac3 = new ArrayList<Pacote>();
 		listPac3.add(pacote2);
 		listPac3.add(pacote3);
 		listPac3.add(pacote4);
@@ -116,13 +116,13 @@ public class PopulaBanco {
 		
 		Endereco end4 = new Endereco("Av otavio 322", 12220999, cidade3);
 		Calendar dtNasc4 = new GregorianCalendar(2000, Calendar.JANUARY, 19);
-		List<Pacote> listPac4 = new ArrayList<>();
+		List<Pacote> listPac4 = new ArrayList<Pacote>();
 		listPac4.add(pacote1);
 		Cliente cliente4 = new Cliente("Paulo", "90028383848", dtNasc4, end4, listPac4);
 		
 		Endereco end5 = new Endereco("Rua Lins de Vasconcelos", 12890000, cidade1);
 		Calendar dtNasc5 = new GregorianCalendar(1983, Calendar.AUGUST, 19);
-		List<Pacote> listPac5 = new ArrayList<>();
+		List<Pacote> listPac5 = new ArrayList<Pacote>();
 		listPac5.add(pacote1);
 		listPac5.add(pacote2);
 		listPac5.add(pacote3);
