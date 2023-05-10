@@ -36,8 +36,12 @@ public class PacoteDaoImpl extends GenericDaoImpl<Pacote,Integer> implements Pac
 	}
 
 	public List<Pacote> buscarPorTransporte(Transporte transporte) {
-		// TODO Auto-generated method stub
-		return null;
+		return em.createQuery("from Pacote p where p.transporte = :t", Pacote.class)
+				.setParameter("t", transporte)
+				.getResultList();
 	}
 
 }
+
+
+

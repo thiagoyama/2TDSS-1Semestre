@@ -20,4 +20,16 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
+	public List<Cliente> buscarPorEstado(String estado) {
+		return em.createQuery("from Cliente c where c.endereco.cidade.uf = :e", Cliente.class)
+				.setParameter("e", estado)
+				.getResultList();
+	}
+	
+	public List<Cliente> buscarPorDiasReserva(int dias) {
+		return em.createQuery("select r.cliente from Reserva r where r.numeroDias = :d", Cliente.class)
+				.setParameter("d", dias)
+				.getResultList();
+	}
+
 }

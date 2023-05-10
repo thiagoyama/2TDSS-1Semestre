@@ -26,6 +26,20 @@ public class Exercicios {
 			System.out.println(c.getNome());
 		}
 		
+		//Buscar os clientes por estado
+		clientes = clienteDao.buscarPorEstado("PR");
+		System.out.println("Buscar cliente por estado");
+		for (Cliente c: clientes) {
+			System.out.println(c.getNome() + " "
+							+ c.getEndereco().getCidade().getUf());
+		}
+		
+		//Buscar os clientes por dias de reserva
+		clientes = clienteDao.buscarPorDiasReserva(10);
+		System.out.println("Buscar cliente por dias de reserva");
+		for (Cliente c: clientes) {
+			System.out.println(c.getNome());
+		}
 		
 	}//main
 }//class
