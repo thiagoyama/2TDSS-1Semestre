@@ -13,10 +13,11 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 		super(entityManager);
 	}
 
-	//Pesquisar o cliente por parte do nome
+	//Pesquisar o cliente por parte do nome, permitir no máximo 2 nomes
 	public List<Cliente> buscarPorNome(String nome) {
 		return em.createQuery("from Cliente c where c.nome like :n", Cliente.class)
 				.setParameter("n", "%" + nome + "%")
+				.setMaxResults(2) //máximo de resultados (2))
 				.getResultList();
 	}
 
