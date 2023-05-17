@@ -1,5 +1,6 @@
 package br.com.fiap.view;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -19,9 +20,10 @@ public class Exercicios {
 		ClienteDao clienteDao = new ClienteDaoImpl(em);
 		
 		//Buscar os clientes por parte do nome
-		List<Cliente> clientes = clienteDao.buscarPorNome("a");
+		List<Cliente> clientes = clienteDao.buscarPorNome("A");
 		
 		//Exibir os nomes dos clientes
+		System.out.println("Buscar clientes por nome");
 		for (Cliente c : clientes) {
 			System.out.println(c.getNome());
 		}
@@ -41,5 +43,32 @@ public class Exercicios {
 			System.out.println(c.getNome());
 		}
 		
+		//Buscar os clientes por parte do nome e nome da cidade
+		clientes = clienteDao.buscar("a", "Salva");
+		System.out.println("Buscar cliente por nome e nome da cidade");
+		//Exibir o nome e o nome da cidade
+		for (Cliente c: clientes) {
+			System.out.println(c.getNome() + " " + 
+					c.getEndereco().getCidade().getNome());
+		}
+		
+		System.out.println("Buscar clientes por estados");
+		List<String> estados = new ArrayList<String>();
+		estados.add("BA");
+		estados.add("PR");
+		//Pesquisar e exibir o nome e o estado
+		clientes = clienteDao.buscarPorEstados(estados);
+		for (Cliente c : clientes) {
+			System.out.println(c.getNome() + " " + 
+					c.getEndereco().getCidade().getUf());
+		}
+		
 	}//main
 }//class
+
+
+
+
+
+
+

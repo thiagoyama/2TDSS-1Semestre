@@ -13,11 +13,11 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 		super(entityManager);
 	}
 
-	//Pesquisar o cliente por parte do nome, permitir no máximo 2 nomes
+	//Pesquisar o cliente por parte do nome, permitir no mï¿½ximo 2 nomes
 	public List<Cliente> buscarPorNome(String nome) {
-		return em.createQuery("from Cliente c where c.nome like :n", Cliente.class)
+		return em.createQuery("from Cliente c where upper(c.nome) like upper(:n)", Cliente.class)
 				.setParameter("n", "%" + nome + "%")
-				.setMaxResults(2) //máximo de resultados (2))
+				.setMaxResults(2) //maximo de resultados (2))
 				.getResultList();
 	}
 
@@ -33,4 +33,24 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
+	public List<Cliente> buscar(String nome, String cidade) {
+		return em.createQuery("from Cliente c where c.nome like :n "
+				+ "and c.endereco.cidade.nome like :c", Cliente.class)
+				.setParameter("n", "%" + nome + "%")
+				.setParameter("c", "%" + cidade + "%")
+				.getResultList();
+	}
+
+	public List<Cliente> buscarPorEstados(List<String> estados) {
+		return em.createQuery("from Cliente c where "
+				+ "c.endereco.cidade.uf in :e", Cliente.class)
+				.setParameter("e", estados)
+				.getResultList();
+	}
+
 }
+
+
+
+
+
