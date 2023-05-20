@@ -54,6 +54,11 @@ public class Pesquisas {
 			System.out.println(p.getDescricao());
 		}
 		
+		//Somar os preços dos pacotes por um transporte
+		transporte = transporteDao.pesquisar(3);
+		double soma = pacoteDao.somarPrecoPorTransporte(transporte);
+		System.out.println("A soma dos preço é: " + soma);
+		
 	}//main
 }//class
 

@@ -48,6 +48,18 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
+	public Long contarPorEstado(String estado) {
+		return em.createQuery("select count(c) from Cliente c where c.endereco.cidade.uf = :D", Long.class )
+				.setParameter("D", estado)
+				.getSingleResult();
+	}
+
+	public Cliente buscarPorCpf(String cpf) {
+		return em.createNamedQuery("Cliente.PorCpf", Cliente.class)
+				.setParameter("churros", cpf)
+				.getSingleResult();
+	}
+
 }
 
 

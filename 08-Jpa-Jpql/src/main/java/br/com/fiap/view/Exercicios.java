@@ -63,6 +63,17 @@ public class Exercicios {
 					c.getEndereco().getCidade().getUf());
 		}
 		
+		//Contar a quantidade de clientes
+		long qtd = clienteDao.contarPorEstado("SP");
+		//Exibir a quantidade de clientes por estado (PR)
+		System.out.println("Clientes por estado: " + qtd);
+		
+		//Pesquisar um cliente por CPF
+		Cliente cliente = clienteDao.buscarPorCpf("50293494030");
+		
+		//Exibir o nome e o cpf do cliente
+		System.out.println(cliente.getNome() + " " + cliente.getCpf());
+		
 	}//main
 }//class
 
