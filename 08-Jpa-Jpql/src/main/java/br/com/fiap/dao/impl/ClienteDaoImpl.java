@@ -1,8 +1,10 @@
 package br.com.fiap.dao.impl;
 
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TemporalType;
 
 import br.com.fiap.dao.ClienteDao;
 import br.com.fiap.entity.Cliente;
@@ -58,6 +60,13 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 		return em.createNamedQuery("Cliente.PorCpf", Cliente.class)
 				.setParameter("churros", cpf)
 				.getSingleResult();
+	}
+
+	public List<Cliente> buscarPorDataNascimento(Calendar inicio, Calendar fim) {
+		return em.createNamedQuery("Cliente.PorDataNascimento", Cliente.class)
+				.setParameter("i", inicio)
+				.setParameter("f", fim)
+				.getResultList();
 	}
 
 }

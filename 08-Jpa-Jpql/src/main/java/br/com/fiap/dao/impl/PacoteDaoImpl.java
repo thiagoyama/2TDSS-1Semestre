@@ -55,6 +55,15 @@ public class PacoteDaoImpl extends GenericDaoImpl<Pacote,Integer> implements Pac
 				.getSingleResult();
 	}
 
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<Pacote> buscarPorPrecoMaior(float preco) {
+		return em.createNativeQuery
+				("select * from tb_ead_pacote where vl_pacote >= :preco", Pacote.class)
+				.setParameter("preco", preco)
+				.getResultList();
+	}
+
 }
 
 

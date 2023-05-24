@@ -19,4 +19,6 @@ public interface PacoteDao extends GenericDao<Pacote,Integer>{
 	
 	Double somarPrecoPorTransporte(Transporte transporte);
 	
+	List<Pacote> buscarPorPrecoMaior(float preco);
+	
 }

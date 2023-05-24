@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
@@ -18,7 +19,10 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@NamedQuery(name="Cliente.PorCpf", query = "select c from Cliente c where c.cpf = :churros")
+@NamedQueries({
+	@NamedQuery(name="Cliente.PorCpf", query = "select c from Cliente c where c.cpf = :churros"),
+	@NamedQuery(name="Cliente.PorDataNascimento", query="select c from Cliente c where c.dataNascimento between :i and :f")
+})
 
 @Entity
 @Table(name="TB_EAD_CLIENTE")

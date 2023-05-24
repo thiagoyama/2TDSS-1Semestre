@@ -1,7 +1,10 @@
 package br.com.fiap.view;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.logging.Level;
 
 import javax.persistence.EntityManager;
 
@@ -13,6 +16,9 @@ import br.com.fiap.singleton.EntityManagerFactorySingleton;
 public class Exercicios {
 
 	public static void main(String[] args) {
+		
+		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
+		
 		//Instanciar o EntityManager
 		EntityManager em = EntityManagerFactorySingleton.getInstance().createEntityManager();
 		
@@ -73,6 +79,14 @@ public class Exercicios {
 		
 		//Exibir o nome e o cpf do cliente
 		System.out.println(cliente.getNome() + " " + cliente.getCpf());
+		
+		//Pesquisar cliente por data nascimento
+		Calendar inicio = new GregorianCalendar(1990, Calendar.JANUARY, 1);
+		Calendar fim = new GregorianCalendar(1990, Calendar.DECEMBER, 31);
+		
+		clientes = clienteDao.buscarPorDataNascimento(inicio, fim);
+		
+		clientes.forEach(c -> System.out.println(c.getNome()));
 		
 	}//main
 }//class
